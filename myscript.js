@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
   button.addEventListener('click', async() => {
     let device
-    const VENDOR_ID = 0x32902
+    const VENDOR_ID = 0x32903
     
     try {
       device = await navigator.usb.requestDevice({
