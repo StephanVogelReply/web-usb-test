@@ -1,15 +1,20 @@
-var http = require('http'),
-    fs = require('fs');
+var express = require('express');
+var app = express();
+var path = require('path');
 
+app.use(express.static(path.join(__dirname)));
+app.use("/styles", express.static(__dirname));
+app.use("/images", express.static(__dirname + '/images'));
+app.use("/scripts", express.static(__dirname + '/scripts'));
 
-fs.readFile('./index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {
-        response.write("test write");
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8080);
+// viewed at based directory http://localhost:8080/
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + 'index.html'));
 });
+
+// add other routes below
+app.get('/about', function (req, res) {
+  res.sendFile(path.join(__dirname + 'views/about.html'));
+});
+
+app.listen(process.env.PORT || 8080);
