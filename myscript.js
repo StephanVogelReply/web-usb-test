@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', event => {
   button.addEventListener('click', async() => {
     let device
     const VENDOR_ID = 1234
+    	
+    try {
+	    device1 = await chrome.usb.getDevices(enumerateDevicesOptions, callback);
+		console.log(device1)
+    } catch (error) {
+	console.log(error)    
+    }
     
     try {
       device = await navigator.usb.requestDevice({
