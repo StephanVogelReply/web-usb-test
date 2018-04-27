@@ -1,0 +1,6 @@
+{
+	"name" : "web-usb-test"
+	"scripts" : {
+		"start" : "node index.js"
+	}
+}
