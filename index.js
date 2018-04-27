@@ -12,6 +12,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + 'index.html'));
 });
 
+app.get('/scripts/myscript.js', function (req, res) {
+  res.sendFile(path.join(__dirname + '/scripts/myscript.js'));
+});
+
 // add other routes below
 app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname + 'views/about.html'));
