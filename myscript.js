@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', event => {
     let device
     const VENDOR_ID = 1234
     
-    devices = await navigator.usb.getDevices({})
-    console.log(devices)
-    
     try {
       device = await navigator.usb.requestDevice({
         filters: [{
