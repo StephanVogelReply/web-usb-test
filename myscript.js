@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', event => {
       })
 
       console.log(device)
-      console.log(device.productName)
       console.log('open')
       await device.open()
       console.log('opened:', device)
