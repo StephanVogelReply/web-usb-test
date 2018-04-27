@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', event => {
     let device
     const VENDOR_ID = 1234
     
-    console.log(navigator.usb.getDevices)
+    console.log(navigator.usb.getDevices[0].productName)
     
     try {
       device = await navigator.usb.requestDevice({
