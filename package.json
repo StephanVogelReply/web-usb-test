@@ -1,6 +1,9 @@
 {
-	"name" : "tutorial"
-	"scripts" : {
-		"start" : "node server.js"
-	}
+	"name" : "web-usb-test"
+	"engines": {
+    		"node": "8.11.1"
+  	},
+  	"dependencies": {
+    		"express": "^4.15.2"
+  }
 }
