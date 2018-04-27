@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/scripts/myscript.js', function (req, res) {
-  res.sendFile(path.join(__dirname + 'scripts/myscript.js'));
+  res.sendFile(path.join(__dirname + 'myscript.js'));
 });
 
 // add other routes below
