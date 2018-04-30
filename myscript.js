@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
-
+			
+			chrome.usb.openDevice(device, onOpenCallback);
+	    
+	    
       console.log('open')
 			console.log(device)
       await device.open()
