@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', event => {
     const VENDOR_ID = 1234
     	
     try {
-	
+	navigator.usb.getDevices().then(function(devices){
+		console.log(devices);
+	});
     } catch (error) {
 	console.log(error)    
     }
@@ -17,10 +19,10 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
-		navigator.usb.getDevices().then(function(devices){
-		    console.log(devices);
-		});
+		
+	
 	    
+	//next
 	    
       console.log(device)
       console.log('open')
