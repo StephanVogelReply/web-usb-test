@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', event => {
 	navigator.usb.getDevices().then(function(devices){
 		console.log(devices);
 	});
+	devices.forEach(function (device) {
+		navigator.usb.openDevices(device, function (connection) {
+			if (connection) connections.push(connection);
+			pendingAccessRequests--;
+			if (pendingAccessRequests == 0) {
+			  callback(connections);
+			}
+		});
+	});
+	
     } catch (error) {
 	console.log(error)    
     }
