@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', event => {
 				}
 			};
 	    
-			chrome.usb.openDevice(device, onOpenCallback);
+			navigator.usb.openDevice(device, onOpenCallback);
 	    
 	    
       console.log('open')
