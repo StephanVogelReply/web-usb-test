@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', event => {
         }]
       })
 	
-			chrome.usb.findDevices(device, callback);
+chrome.usb.findDevices(device, callback)
 	    
       console.log('open')
 			console.log(device)
