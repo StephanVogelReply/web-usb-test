@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', event => {
     	
     try {
 	
-});
     } catch (error) {
 	console.log(error)    
     }
