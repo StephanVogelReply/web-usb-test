@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
-			
+	
+			var usbConnection = null;
+			var onOpenCallback = function(connection) {
+				if (connection) {
+					usbConnection = connection;
+					console.log("Device opened.");
+				} else {
+					console.log("Device failed to open.");
+				}
+			};
+	    
 			chrome.usb.openDevice(device, onOpenCallback);
 	    
 	    
