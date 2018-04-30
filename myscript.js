@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', event => {
     try {
 	navigator.usb.getDevices().then(function(devices){
 		console.log(devices);
-		console.log(devices[0]);
+		device = devices[0];
+		console.log(device);
+		await device.open()
+		console.log('opened:', device)
 	});
 	
 	
