@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', event => {
 		console.log(devices);
 		device = devices[0];
 		console.log(device);
-		await device.open()
+		device.open()
 		console.log('opened:', device)
 	});
 	
