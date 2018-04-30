@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', event => {
     try {
       device = await navigator.usb.requestDevice({
         filters: [{
-          vendorId: VENDOR_ID
+          //vendorId: VENDOR_ID
         }]
       })
 
