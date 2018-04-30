@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', event => {
       })
 	
 	
-	    
+	    device.tranferIn(1, length)
       console.log('open')
 			console.log(device)
       await device.open()
