@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', event => {
     const VENDOR_ID = 1234
     	
     try {
-	    chrome.usb.findDevices({}, callback);
-		console.log("first open")
+	navigator.usb.requestDevice().then(function(device){
+   	console.log('First test', device);
+});
     } catch (error) {
 	console.log(error)    
     }
