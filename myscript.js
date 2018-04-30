@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', event => {
       })
 
       console.log('open')
+			console.log(device)
       await device.open()
       console.log('opened:', device)
     } catch (error) {
