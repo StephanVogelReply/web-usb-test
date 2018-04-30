@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', event => {
     } catch (error) {
 	console.log(error)    
     }
-    
+    /*
     try {
       device = await navigator.usb.requestDevice({
         filters: [{
@@ -32,5 +32,6 @@ document.addEventListener('DOMContentLoaded', event => {
       console.log(error)
     }
 	  await device.close()
+	*/
   })
 })
