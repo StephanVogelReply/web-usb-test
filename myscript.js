@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', event => {
         }]
       })
 	    	navigator.usb.requestDevice().then(function(device){
-   		console.log('First test', device);
+   			console.log(device);
+		});
 		navigator.usb.getDevices().then(function(devices){
-    		console.log(devices);
+		    console.log(devices);
+		});
 	    
 	    
       console.log(device)
