@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
-	    	navigator.usb.requestDevice().then(function(device){
-   			console.log(device);
-		});
 		navigator.usb.getDevices().then(function(devices){
 		    console.log(devices);
 		});
