@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', event => {
 		console.log(device);
 		//device.open()
 		//console.log('opened:', device)
-		device2 = await navigator.usb.requestDevice({
+		device2 = navigator.usb.requestDevice({
 			filters: [{
 				//vendorId: VENDOR_ID
 			}]
