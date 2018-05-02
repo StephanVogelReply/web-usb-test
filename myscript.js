@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', event => {
         }]
       })
 	
-	
-	    await device.tranferIn(1, length)
       console.log('open')
 			console.log(device)
       await device.open()
