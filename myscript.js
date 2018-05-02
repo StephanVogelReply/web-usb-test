@@ -11,13 +11,23 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
+	    console.log(device.data)
+	// check wheter selected device hold information
 	if (device === undefined) {
-		console.log('devvice undefined')
+		console.log('device undefined')
 	}
+			
+	
       console.log('open')
 			console.log(device)
+			// try to open or get access to the selected device
       await device.open()
       console.log('opened:', device)
+			
+			// catch data stream from usb
+			while (true) {
+				let result = await dat
+			}
     } catch (error) {
       console.log(error)
     }
