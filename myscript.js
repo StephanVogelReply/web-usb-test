@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', event => {
           //vendorId: VENDOR_ID
         }]
       })
-	
+	if (device === undefined) {
+		console.log('devvice undefined')
+	}
       console.log('open')
 			console.log(device)
       await device.open()
