@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', event => {
 			// try to open or get access to the selected device
       await device.open()
       console.log('opened:', device)
-console.log(device.data)
-			
+	
 			// catch data stream from usb
-			//while (true) {
-			//	let result = await dat
-			//}
+			while (true) {
+				let result = await data.transferIn(1, 6);
+				console.log('Channel 1: ' + result.data.getUint16(0));
+			}
     } catch (error) {
       console.log(error)
     }
