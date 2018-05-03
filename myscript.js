@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', event => {
 	
 			// catch data stream from usb
 			while (true) {
-				let result = await device.transferIn();
+				let result = await device.transferIn(0,0);
 				console.log('Channel 1: ' + result.data.getUint16(0));
 			}
     } catch (error) {
